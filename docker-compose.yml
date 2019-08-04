@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  podcast-db:
+    build: ./Database/.
+    ports:
+    - "8345:8345"
+    volumes:
+    - database
+  podcast-python:
+    build: ./Python/.
+    ports:
+    - "8346:8346"
+    links:
+    - podcast-db
+  podcast-backend:
+    build: ./Backend/.
+    ports:
+    - "8347:8347"
+  podcast-frontend:
+    build: ./Frontend/.
+    ports:
+    - "8348:8348"
+    links:
+    - podcast-backend
+
+volumes:
+  database:
