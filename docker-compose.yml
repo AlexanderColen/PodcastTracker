@@ -17,6 +17,8 @@ services:
     build: ./Backend/.
     ports:
     - "8347:8347"
+    links:
+    - podcast-db
   podcast-frontend:
     build: ./Frontend/.
     ports:
