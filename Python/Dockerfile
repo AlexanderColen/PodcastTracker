@@ -11,6 +11,14 @@ RUN echo $TZ > /etc/timezone && \
     dpkg-reconfigure -f noninteractive tzdata && \
     apt-get clean
 
-# TODO:
-# COPY <SCRIPTS> <OUTPUT>
-# RUN <UPDATE-DB SCRIPT>
+# Install Python3.
+RUN apt-get update && \
+    apt-get install python3 python3-pip -y
+
+# Install all dependencies.
+COPY pip-dependencies.txt pip-dependencies.txt
+RUN pip3 install -r pip-dependencies.txt 
+
+# Start up script.
+COPY main.py main.py
+RUN chmod +x main.py
