@@ -15,5 +15,5 @@ RUN echo $TZ > /etc/timezone && \
 COPY ./db-setup.js ./db-setup.js
 COPY ./rss-feeds.txt ./rss-feeds.txt
 
-# TODO: Find a way to make the following command run and not exit with a non-zero code (1).
-# RUN mongo tracker db-setup.js
+# TODO: Find a way to make the following command run properly.
+RUN mongo tracker db-setup.js; exit 0

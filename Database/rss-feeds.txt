@@ -9,7 +9,6 @@ https://rss.art19.com/hello-from-the-magic-tavern
 https://feeds.megaphone.fm/lore
 https://podcasts.files.bbci.co.uk/w13xttx2.rss
 https://rss.acast.com/abroadinjapan
-https://podcasts.apple.com/ca/podcast/benjamen-walkers-theory-of-everything/id646537599
 https://maximumfun.org/feeds/bubble.xml
 https://rss.simplecast.com/podcasts/4704/rss
 http://feeds.nightvalepresents.com/dreamboypodcast
@@ -23,3 +22,4 @@ https://www.espn.com/espnradio/feeds/rss/podcast.xml?id=26832777
 https://podcasts.files.bbci.co.uk/p03bv899.rss
 https://feeds.megaphone.fm/stufftoblowyourmind
 https://podcasts.files.bbci.co.uk/b00snr0w.rss
+http://feeds.prx.org/toe

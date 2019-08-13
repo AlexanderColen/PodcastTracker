@@ -20,5 +20,8 @@ COPY pip-dependencies.txt pip-dependencies.txt
 RUN pip3 install -r pip-dependencies.txt 
 
 # Start up script.
+COPY DB DB
+COPY Model Model
+COPY RSS RSS
 COPY main.py main.py
 RUN chmod +x main.py
