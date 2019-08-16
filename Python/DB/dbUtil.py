@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-import datetime
+from datetime import datetime
 import feedparser
 import unicodedata
 
@@ -29,11 +29,11 @@ class DbUtil:
         for record in rss_feeds:
             if (not record['name']):
                 feed = feedparser.parse(url_file_stream_or_string=record['rss'])
-                db.rss.find_one_and_update({'rss': record['rss']}, { '$set': {'name': feed.channel.title, 'lastRefresh': datetime.datetime.now()}})
-                print(f'Updated {feed.channel.title}')
+                db.rss.find_one_and_update({'rss': record['rss']}, { '$set': {'name': feed.channel.title, 'lastRefresh': datetime.now()}})
+                print((f'Updated {feed.channel.title}').encode('utf-8'))
 
     @staticmethod
-    def add_podcast_episodes(episodes):
+    def add_podcast_episodes(episodes, feed_id):
         db = DbUtil.connect()
 
         new = 0
@@ -55,5 +55,5 @@ class DbUtil:
                 duplicates += 1
 
         print(f'{new} new and {duplicates} duplicate episodes found.')
-                                       
-        # TODO Update last refresh for RSS table.
+
+        db.rss.find_one_and_update({'_id': feed_id}, { '$set': {'lastRefresh': datetime.now()}})
