@@ -39,11 +39,9 @@ class DbUtil:
         new = 0
         duplicates = 0
         for episode in episodes:
-            # TODO Check if episodes already exists.
-            found = False
-            # foundEpisode = db.episode.find({'title': episode.title, 'description': episode.description, 'date': episode.date})
+            foundCount = db.episode.count_documents({'uuid': episode.uuid, 'date': episode.date})
             # If not, insert the episode into the database.
-            if (not found):
+            if foundCount == 0:
                 new += 1
                 db.episode.insert_one({'uuid': episode.uuid,
                                        'title': episode.title,
