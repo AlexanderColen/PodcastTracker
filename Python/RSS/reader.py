@@ -1,5 +1,5 @@
 import feedparser
-from Model.podcast import Podcast
+from .podcast import Podcast
 
 
 class RssReader:
