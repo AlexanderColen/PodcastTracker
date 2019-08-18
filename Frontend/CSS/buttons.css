@@ -1,0 +1,15 @@
+/**
+ * Button Styling CSS.
+ */
+
+button {
+    background-color: rgb(29, 180, 36);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    color: white;
+    font-size: 12pt;
+}
+
+button span {
+    padding-right: 5px;
+}

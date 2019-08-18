@@ -1,0 +1,28 @@
+/**
+ * Login Styling CSS.
+ */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.error-container {
+    display: none;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+}
+
+.login-container h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.login-container .login-form {
+    
+}
