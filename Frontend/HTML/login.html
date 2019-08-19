@@ -1,17 +1,26 @@
 <head>
-    <title>Login - Podcast Tracker</title>
+    <title>Login - Podcast Addiction Tracker</title>
     <script src='../JS/login.js'></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
     <link rel="stylesheet" type="text/css" href="../CSS/login.css">
     <link rel="stylesheet" type="text/css" href="../CSS/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/header.css">
 </head>
 <body>
+    <header>
+        <div class='header-container'>
+            <img src='../Icons/Image_Placeholder.svg' alt='Placeholder Image' />
+            <h1>Podcast Addiction Tracker</h1>
+        </div>
+    </header>
     <div class='container'>
         <div class='error-container'>
-            <h1 class='error-title'>Error!</h1>
+            <h2 class='error-title'>Error!</h2>
             <p class='error-message'>Something went wrong!</p>
         </div>
         <div class='login-container'>
-            <h1>Login</h1>
+            <h2>LOGIN</h2>
             <form class='login-form'>
                 <input type='text' placeholder='Enter Username' />
                 <input type='password' placeholder='Enter Password' />
@@ -19,4 +28,9 @@
             </form>
         </div>
     </div>
+    <footer>
+        <div class='footer-container'>
+            <p>Podcast Addiction Tracker - © Alexander Colen - 2019</p>
+        </div>
+    </footer>
 </body>

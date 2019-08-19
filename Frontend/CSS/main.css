@@ -1,0 +1,16 @@
+/**
+ * Main Styling CSS.
+ */
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
