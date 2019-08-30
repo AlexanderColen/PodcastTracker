@@ -66,3 +66,7 @@ project.lock.json
 ###########################################################################################
 # End of core ignore list, below put you custom 'per project' settings (patterns or path) #
 ###########################################################################################
+
+Backend/Podcast-BE/Podcast-BE/Areas/*
+Backend/Podcast-BE/Podcast-BE/Content/*
+Backend/Podcast-BE/Podcast-BE/Scripts/*
