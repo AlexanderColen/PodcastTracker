@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,9 +9,17 @@ namespace Podcast_BE.Models
 {
     public class Podcast
     {
-        public Guid _id { get; set; }
-        public String RSS { get; set; }
-        public String Name { get; set; }
-        public DateTime LastUpdate { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+
+        [BsonElement("rss")]
+        public string RSS { get; set; }
+
+        [BsonElement("name")]
+        public string Name { get; set; }
+
+        [BsonElement("lastRefresh")]
+        public string LastUpdate { get; set; }
     }
 }

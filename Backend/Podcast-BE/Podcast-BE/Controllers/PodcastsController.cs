@@ -17,42 +17,15 @@ namespace Podcast_BE.Controllers
         private readonly PodcastsService podcastService = new PodcastsService();
 
         // GET: api/Podcasts
-        public IHttpActionResult Get()
+        public List<Podcast> Get()
         {
-            IEnumerable<Podcast> podcasts = this.podcastService.GetPodcasts();
-
-            if (podcasts == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(podcasts);
+            return this.podcastService.Get();
         }
 
-        // GET: api/Podcasts/[UUID]
-        public IHttpActionResult Get(Guid UUID)
+        // GET: api/Podcasts/[id]
+        public Podcast Get(string id)
         {
-            Podcast podcast = this.podcastService.GetPodcast(UUID);
-
-            if (podcast == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(podcast);
-        }
-
-        // GET: api/podcasts/find
-        public IHttpActionResult Find(String Name)
-        {
-            IEnumerable<Podcast> podcasts = this.podcastService.FindPodcasts(Name);
-
-            if (podcasts == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(podcasts);
+            return this.podcastService.Get(id);
         }
     }
 }
