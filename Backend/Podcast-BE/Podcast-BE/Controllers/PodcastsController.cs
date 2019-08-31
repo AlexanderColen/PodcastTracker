@@ -1,4 +1,5 @@
 ﻿using Podcast_BE.Models;
+using Podcast_BE.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,25 +13,26 @@ namespace Podcast_BE.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PodcastsController : ApiController
     {
-        private Podcast[] Podcasts = new Podcast[]
-        {
-            new Podcast { id = 1, _id = Guid.NewGuid(), Name = "Nerdificent", LastUpdate = new DateTime() },
-            new Podcast { id = 2, _id = Guid.NewGuid(), Name = "Hello From The Magic Tavern", LastUpdate = new DateTime() },
-            new Podcast { id = 3, _id = Guid.NewGuid(), Name = "EUphoria Podcast", LastUpdate = new DateTime() },
-            new Podcast { id = 4, _id = Guid.NewGuid(), Name = "Swindled", LastUpdate = new DateTime() },
-            new Podcast { id = 5, _id = Guid.NewGuid(), Name = "Abroad In Japan", LastUpdate = new DateTime() },
-        };
+        // TODO Find a way to autowire the service.
+        private readonly PodcastsService podcastService = new PodcastsService();
 
         // GET: api/Podcasts
-        public IEnumerable<Podcast> Get()
+        public IHttpActionResult Get()
         {
-            return this.Podcasts;
+            IEnumerable<Podcast> podcasts = this.podcastService.GetPodcasts();
+
+            if (podcasts == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(podcasts);
         }
 
-        // GET: api/Podcasts/5
-        public IHttpActionResult Get(int id)
+        // GET: api/Podcasts/[UUID]
+        public IHttpActionResult Get(Guid UUID)
         {
-            Podcast podcast = this.Podcasts.FirstOrDefault((p) => p.id == id);
+            Podcast podcast = this.podcastService.GetPodcast(UUID);
 
             if (podcast == null)
             {
@@ -38,6 +40,19 @@ namespace Podcast_BE.Controllers
             }
 
             return Ok(podcast);
+        }
+
+        // GET: api/podcasts/find
+        public IHttpActionResult Find(String Name)
+        {
+            IEnumerable<Podcast> podcasts = this.podcastService.FindPodcasts(Name);
+
+            if (podcasts == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(podcasts);
         }
     }
 }
