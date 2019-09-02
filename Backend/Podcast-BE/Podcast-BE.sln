@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podcast-BE", "Podcast-BE\Podcast-BE.csproj", "{882ABCA7-37DC-4AFB-A696-D1865B4B258D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podcast-BE", "Podcast-BE\Podcast-BE.csproj", "{1FFF0B28-6730-41FD-8FDE-CC300183592D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{882ABCA7-37DC-4AFB-A696-D1865B4B258D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{882ABCA7-37DC-4AFB-A696-D1865B4B258D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{882ABCA7-37DC-4AFB-A696-D1865B4B258D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{882ABCA7-37DC-4AFB-A696-D1865B4B258D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FFF0B28-6730-41FD-8FDE-CC300183592D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FFF0B28-6730-41FD-8FDE-CC300183592D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FFF0B28-6730-41FD-8FDE-CC300183592D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FFF0B28-6730-41FD-8FDE-CC300183592D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CE8479DF-EDE5-41D5-8A87-2FA9635B417F}
+		SolutionGuid = {CE2302A5-FA75-47BD-B0A6-DE74D004F046}
 	EndGlobalSection
 EndGlobal

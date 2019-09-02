@@ -15,7 +15,7 @@ services:
     - podcast-db
     command: tail -F anything
   podcast-backend:
-    build: ./Backend/.
+    build: ./Backend/Podcast-BE/Podcast-BE/.
     ports:
     - "8347:8347"
     command: tail -F anything
