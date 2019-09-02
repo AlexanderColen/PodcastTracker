@@ -22,7 +22,7 @@ services:
   podcast-frontend:
     build: ./Frontend/.
     ports:
-    - "8348:8348"
+    - "8348:80"
     links:
     - podcast-backend
     command: tail -F anything

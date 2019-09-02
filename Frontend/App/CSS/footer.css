@@ -1,0 +1,16 @@
+/**
+ * Footer Styling CSS.
+ */
+
+footer {
+    flex-shrink: 0;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-container p {
+    color: rgb(111, 129, 100);
+}

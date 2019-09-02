@@ -11,5 +11,8 @@ RUN echo $TZ > /etc/timezone && \
     dpkg-reconfigure -f noninteractive tzdata && \
     apt-get clean
 
-# TODO:
-# COPY <DISTRIBUTION BUILD> <OUTPUT>
+# Copy custom configuration file.
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy application to NGINX hosted folder.
+COPY ./App /usr/share/nginx/html
